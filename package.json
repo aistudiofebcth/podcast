@@ -1,9 +1,9 @@
 {
-  "name": "zentune-design-system",
+  "name": "febc-podcast-design-system",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "ZenTune — a music-streaming design system (React + TypeScript + Tailwind) generated from the ZenTune Figma UI kit.",
+  "description": "FEBC Podcast Design System — a React + TypeScript + Tailwind design system for FEBC Christian Media, built from a Figma UI kit.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

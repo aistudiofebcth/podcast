@@ -50,7 +50,7 @@ export function SettingsScreen() {
           <ListRow leading={<Shield size={22} />} label="Terms & Conditions" onPress={() => {}} />
           <ListRow
             leading={<Star size={22} />}
-            label="Rate ZenTune"
+            label="Rate FEBC Podcast"
             trailing={<ChevronRight size={20} className="text-content-muted" />}
             onPress={() => {}}
           />

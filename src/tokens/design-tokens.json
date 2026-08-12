@@ -1,7 +1,7 @@
 {
   "$meta": {
-    "name": "ZenTune Design Tokens",
-    "description": "Canonical design tokens for the ZenTune music-streaming app, extracted from the ZenTune Figma UI kit (file yDptxi61nJ5FgxfOPNi7mR) via the Figma MCP server.",
+    "name": "FEBC Podcast Design Tokens",
+    "description": "Canonical design tokens for the FEBC Podcast Design System, extracted from a music-streaming Figma UI kit (file yDptxi61nJ5FgxfOPNi7mR) via the Figma MCP server and themed to FEBC Christian Media.",
     "source": "Figma — ZenTune ⌥ Music Streaming Mobile UI Kit",
     "brand": "#014f6e",
     "brandName": "FEBC Christian Media",

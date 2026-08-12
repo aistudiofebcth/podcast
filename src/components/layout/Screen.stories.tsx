@@ -12,7 +12,7 @@ const Content = () => (
       gap: 8,
     }}
   >
-    <div style={{ fontSize: 22, fontWeight: 700 }}>ZenTune</div>
+    <div style={{ fontSize: 22, fontWeight: 700 }}>FEBC</div>
     <div style={{ opacity: 0.7 }}>Your daily mix</div>
   </div>
 )

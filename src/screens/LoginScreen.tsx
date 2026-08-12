@@ -32,7 +32,7 @@ export function LoginScreen() {
             type="email"
             value={email}
             onChangeText={setEmail}
-            placeholder="you@zentune.com"
+            placeholder="you@febc.org"
             trailingIcon={<Mail size={24} />}
           />
           <TextField

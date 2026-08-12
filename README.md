@@ -1,9 +1,10 @@
-# ZenTune Design System
+# FEBC Podcast Design System
 
-A production-ready **React + TypeScript + Tailwind** design system for the
-**ZenTune** music-streaming mobile app, generated 1:1 from the
-[ZenTune Figma UI kit](https://www.figma.com/design/yDptxi61nJ5FgxfOPNi7mR/ZenTune-Music-Streaming-Mobile-UI-Kit)
-via the Figma MCP server.
+A production-ready **React + TypeScript + Tailwind** design system for
+**FEBC Christian Media** podcast/streaming apps. Its structure and measurements
+were generated via the Figma MCP server from a
+[music-streaming Figma UI kit](https://www.figma.com/design/yDptxi61nJ5FgxfOPNi7mR/ZenTune-Music-Streaming-Mobile-UI-Kit),
+then themed to the FEBC brand (deep teal + sky blue).
 
 It ships the full stack of a design system:
 

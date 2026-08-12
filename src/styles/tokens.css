@@ -94,6 +94,9 @@
   --color-icon: var(--zt-white);
   --color-border: var(--zt-white-250);
   --color-border-strong: var(--zt-white-350);
+  /* Logo mark (bold ring lighter on dark for contrast) */
+  --logo-ring: var(--zt-accent);
+  --logo-ripple: #bfe0ee;
 }
 
 /* ---- Theme: LIGHT (root or any nested data-theme="light" scope) ------- */
@@ -110,4 +113,7 @@
   --color-icon: var(--zt-black);
   --color-border: var(--zt-dark-250);
   --color-border-strong: var(--zt-gray-500);
+  /* Logo mark (deep teal ring on light, matching the FEBC brand lockup) */
+  --logo-ring: var(--zt-primary);
+  --logo-ripple: var(--zt-accent);
 }

@@ -1,8 +1,9 @@
-# ZenTune Design System — Reference
+# FEBC Podcast Design System — Reference
 
-The canonical documentation for the ZenTune design system. Every value here is
-extracted from the ZenTune Figma UI kit (file `yDptxi61nJ5FgxfOPNi7mR`) and is
-the source of truth for the code in `src/`.
+The canonical documentation for the FEBC Podcast design system. Every value here
+is extracted from a music-streaming Figma UI kit (file `yDptxi61nJ5FgxfOPNi7mR`),
+themed to the FEBC Christian Media brand, and is the source of truth for the
+code in `src/`.
 
 - [Foundations](#foundations)
   - [Themes](#themes)

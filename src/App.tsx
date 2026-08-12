@@ -215,7 +215,7 @@ function Typography() {
     <div className="rounded-lg border border-white-150 bg-white-150 p-6">
       {TYPE.map((r) => (
         <div key={r.token} className="flex items-baseline justify-between gap-6 border-b border-stroke py-3 last:border-0">
-          <span className={`${r.cls} text-content`}>ZenTune</span>
+          <span className={`${r.cls} text-content`}>FEBC Podcast</span>
           <span className="shrink-0 text-right">
             <span className="block type-caption text-content">{r.token}</span>
             <span className="block type-micro text-content-muted">{r.spec}</span>
@@ -238,7 +238,7 @@ function TextFieldDemo() {
   const [c] = React.useState('')
   return (
     <div className="flex w-full flex-col gap-4">
-      <TextField label="Email" type="email" value={a} onChangeText={setA} placeholder="you@zentune.com" trailingIcon={<Mail size={24} />} />
+      <TextField label="Email" type="email" value={a} onChangeText={setA} placeholder="you@febc.org" trailingIcon={<Mail size={24} />} />
       <TextField label="Password" type="password" value={b} onChangeText={setB} placeholder="••••••••" />
       <TextField label="Country" type="select" value={c} onChangeText={() => {}} placeholder="Choose one" />
       <TextField label="Username" value="taken" onChangeText={() => {}} error="That username is taken" />
@@ -525,7 +525,7 @@ function Gallery() {
             <EmptyState headline="No results for “lofi”" supportingText="Try a different search term." />
           </Panel>
           <Panel title="OnboardingText">
-            <OnboardingText text="Millions of songs, podcasts and stories — free, on ZenTune." />
+            <OnboardingText text="Millions of songs, podcasts and stories — free, on FEBC." />
           </Panel>
         </Grid>
       </Section>
@@ -604,10 +604,11 @@ export default function App() {
       <header className="mx-auto flex max-w-6xl flex-col gap-4 px-6 pt-12 pb-8">
         <Logo />
         <div>
-          <h1 className="type-heading-1 text-content">ZenTune Design System</h1>
+          <h1 className="type-heading-1 text-content">FEBC Podcast Design System</h1>
           <p className="mt-3 max-w-2xl type-body text-content-muted">
-            React + TypeScript + Tailwind, generated from the ZenTune Figma UI kit and themed to the
-            FEBC Christian Media palette. Foundations, every component, and the screens they compose.
+            A React + TypeScript + Tailwind design system for FEBC Christian Media — built from a
+            Figma UI kit and themed to the FEBC palette. Foundations, every component, and the
+            screens they compose.
           </p>
         </div>
       </header>

@@ -20,7 +20,7 @@ function TypeScale() {
     <div className="w-[720px] max-w-full">
       {SCALE.map((row) => (
         <div key={row.token} className="flex items-baseline justify-between gap-6 border-b border-stroke py-4">
-          <span className={`${row.cls} text-content`}>ZenTune · เจนจูน</span>
+          <span className={`${row.cls} text-content`}>FEBC · เอฟบีซี</span>
           <span className="shrink-0 text-right">
             <span className="block type-caption text-content">{row.token}</span>
             <span className="block type-micro text-content-muted">{row.spec}</span>
