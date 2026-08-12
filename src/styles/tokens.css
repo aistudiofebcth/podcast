@@ -1,0 +1,98 @@
+/**
+ * ZenTune — Design Tokens (CSS custom properties)
+ * ------------------------------------------------
+ * Generated from the ZenTune Figma UI kit.
+ *
+ * Two layers:
+ *   1. Physical palette — raw, theme-independent values (--zt-*).
+ *   2. Semantic tokens   — role-based aliases that flip per theme
+ *                          (--color-*, --surface-*, --text-*, --border-*).
+ *
+ * The app ships two themes. Dark (#151515) is the default/signature theme
+ * used by auth, onboarding, settings, and the player. Light (#ffffff) is used
+ * by home, library, and artist-select. Switch with `data-theme="light"`.
+ */
+
+:root {
+  /* ---- Physical palette ------------------------------------------------ */
+  --zt-primary: #ff3500;
+  --zt-primary-700: rgba(255, 53, 0, 0.7);
+  --zt-primary-150: rgba(255, 53, 0, 0.15);
+
+  --zt-black: #151515;
+  --zt-white: #ffffff;
+  --zt-gray-700: #717171;
+  --zt-gray-500: #c9c9c9;
+  --zt-warning: #e9a81c;
+
+  /* Whitescale translucency ramp (glass, borders, secondary text on dark) */
+  --zt-white-900: #ffffff;
+  --zt-white-600: rgba(255, 255, 255, 0.6);
+  --zt-white-500: rgba(255, 255, 255, 0.5);
+  --zt-white-400: rgba(255, 255, 255, 0.4);
+  --zt-white-350: rgba(255, 255, 255, 0.35);
+  --zt-white-250: rgba(255, 255, 255, 0.25);
+  --zt-white-200: rgba(255, 255, 255, 0.2);
+  --zt-white-150: rgba(255, 255, 255, 0.15);
+
+  /* Darkscale translucency ramp (scrims, glass on light) */
+  --zt-dark-900: #151515;
+  --zt-dark-650: rgba(21, 21, 21, 0.65);
+  --zt-dark-500: rgba(21, 21, 21, 0.5);
+  --zt-dark-250: rgba(21, 21, 21, 0.25);
+
+  /* ---- Brand-fixed semantics (do not flip with theme) ------------------ */
+  --color-primary: var(--zt-primary);
+  --color-primary-700: var(--zt-primary-700);
+  --color-primary-150: var(--zt-primary-150);
+  --color-button-text: var(--zt-white);
+  --color-logo-mark: var(--zt-primary);
+  --color-logo-wordmark: var(--zt-white);
+  --color-warning: var(--zt-warning);
+  --color-input-filled: var(--zt-gray-700);
+  --color-input-border: var(--zt-white-350);
+
+  /* ---- Theme: DARK (default) ------------------------------------------ */
+  --color-background: var(--zt-black);
+  --color-surface: var(--zt-white-200);
+  --color-surface-strong: var(--zt-white-250);
+  --color-glass: var(--zt-white-200);
+  --color-scrim: var(--zt-dark-500);
+  --color-text: var(--zt-white);
+  --color-text-muted: var(--zt-white-500);
+  --color-icon: var(--zt-white);
+  --color-border: var(--zt-white-250);
+  --color-border-strong: var(--zt-white-350);
+
+  --font-sans: 'Inter', 'SF Pro Text', 'SF Pro Display', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* ---- Radii ----------------------------------------------------------- */
+  --radius-xs: 4.6px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-card: 20px;
+  --radius-lg: 24px;
+  --radius-xl: 25px;
+  --radius-glass: 36px;
+  --radius-circle: 99px;
+  --radius-full: 9999px;
+
+  /* ---- Elevation / effects -------------------------------------------- */
+  --shadow-key-dark: 0px 1px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-fab: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* ---- Theme: LIGHT --------------------------------------------------- */
+:root[data-theme='light'],
+.theme-light {
+  --color-background: var(--zt-white);
+  --color-surface: var(--zt-dark-250);
+  --color-surface-strong: var(--zt-black);
+  --color-glass: var(--zt-white-600);
+  --color-scrim: var(--zt-white-500);
+  --color-text: var(--zt-black);
+  --color-text-muted: var(--zt-dark-500);
+  --color-icon: var(--zt-black);
+  --color-border: var(--zt-dark-250);
+  --color-border-strong: var(--zt-gray-500);
+}

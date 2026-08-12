@@ -1,0 +1,109 @@
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Inter is a variable-friendly grotesque; keep numerals tabular in stats. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  /* ---- Type scale ------------------------------------------------------ */
+  .type-heading-1 {
+    @apply font-sans text-heading-1 font-bold;
+  }
+  .type-heading-2 {
+    @apply font-sans text-heading-2 font-semibold;
+  }
+  .type-heading-2-medium {
+    @apply font-sans text-heading-2 font-medium;
+  }
+  .type-heading-3 {
+    @apply font-sans text-heading-3 font-semibold;
+  }
+  .type-heading-3-bold {
+    @apply font-sans text-heading-3 font-bold;
+  }
+  .type-body-lg {
+    @apply font-sans text-body-lg font-semibold;
+  }
+  .type-body-bold {
+    @apply font-sans text-body font-bold;
+  }
+  .type-body-medium {
+    @apply font-sans text-body font-medium;
+  }
+  .type-body {
+    @apply font-sans text-body font-normal;
+  }
+  .type-label {
+    @apply font-sans text-label font-semibold;
+  }
+  .type-caption {
+    @apply font-sans text-caption font-medium;
+  }
+  .type-micro {
+    @apply font-sans text-micro font-normal;
+  }
+
+  /* ---- Frosted-glass surfaces ----------------------------------------- */
+  .glass {
+    background-color: var(--zt-white-200);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .glass-soft {
+    background-color: var(--zt-white-150);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+  }
+  .glass-strong {
+    background-color: var(--zt-white-250);
+    backdrop-filter: blur(17.5px);
+    -webkit-backdrop-filter: blur(17.5px);
+  }
+
+  /* ---- Mobile device frame (375x812) used by demo screens ------------- */
+  .zt-screen {
+    position: relative;
+    width: var(--screen-w, 375px);
+    min-height: 812px;
+    overflow: hidden;
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

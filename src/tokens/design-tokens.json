@@ -1,0 +1,99 @@
+{
+  "$meta": {
+    "name": "ZenTune Design Tokens",
+    "description": "Canonical design tokens for the ZenTune music-streaming app, extracted from the ZenTune Figma UI kit (file yDptxi61nJ5FgxfOPNi7mR) via the Figma MCP server.",
+    "source": "Figma — ZenTune ⌥ Music Streaming Mobile UI Kit",
+    "brand": "#ff3500",
+    "themes": ["dark", "light"]
+  },
+  "color": {
+    "brand": {
+      "primary": { "value": "#ff3500", "role": "Primary brand accent — CTAs, play buttons, selection, logo mark" },
+      "primary-700": { "value": "rgba(255,53,0,0.7)", "role": "Primary hover/pressed / de-emphasized accent" },
+      "primary-150": { "value": "rgba(255,53,0,0.15)", "role": "Primary tint — subtle accent wash / focus ring" },
+      "logo-mark": { "value": "#ff3500", "role": "Logo waveform mark + 'tune' wordmark run" },
+      "logo-wordmark": { "value": "#ffffff", "role": "'zen' wordmark run" }
+    },
+    "base": {
+      "black": { "value": "#151515", "role": "Near-black — dark canvas base" },
+      "white": { "value": "#ffffff", "role": "Pure white" },
+      "gray-700": { "value": "#717171", "role": "Neutral gray — input fill / tertiary text" },
+      "gray-500": { "value": "#c9c9c9", "role": "Neutral gray — hairlines, unselected borders on light" }
+    },
+    "whitescale": {
+      "900": { "value": "#ffffff", "role": "100% — solid white surfaces, active nav, handles" },
+      "600": { "value": "rgba(255,255,255,0.6)", "role": "60% — translucent circular icon-button fill, search fill" },
+      "500": { "value": "rgba(255,255,255,0.5)", "role": "50% — secondary/meta text on dark" },
+      "400": { "value": "rgba(255,255,255,0.4)", "role": "40% — unfilled slider rail, dim glass" },
+      "350": { "value": "rgba(255,255,255,0.35)", "role": "35% — glass layer, input border, inner stroke" },
+      "250": { "value": "rgba(255,255,255,0.25)", "role": "25% — glass card fill, translucent borders" },
+      "200": { "value": "rgba(255,255,255,0.2)", "role": "20% — glass surfaces, settings card fill, nav border" },
+      "150": { "value": "rgba(255,255,255,0.15)", "role": "15% — faintest glass fill" }
+    },
+    "darkscale": {
+      "900": { "value": "#151515", "role": "100% — opaque dark fill, selected chips, scrim base" },
+      "650": { "value": "rgba(21,21,21,0.65)", "role": "65% — avatar 'Change' pill overlay" },
+      "500": { "value": "rgba(21,21,21,0.5)", "role": "50% — search placeholder, muted dark overlays" },
+      "250": { "value": "rgba(21,21,21,0.25)", "role": "25% — inactive nav item, neutral tag, glass on light" }
+    },
+    "semantic": {
+      "text-white": { "value": "#ffffff", "role": "Primary text on dark / on-image" },
+      "text-dark": { "value": "#151515", "role": "Primary text on light surfaces" },
+      "icon-white": { "value": "#ffffff", "role": "Default monochrome icon" },
+      "button-text": { "value": "#ffffff", "role": "Button label on primary fill" },
+      "input-filled": { "value": "#717171", "role": "Filled field surface on dark" },
+      "input-border": { "value": "rgba(255,255,255,0.35)", "role": "1px field border on dark" }
+    },
+    "status": {
+      "warning": { "value": "#e9a81c", "role": "Warning / rating-star gold" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": "Inter, 'SF Pro Text', 'SF Pro Display', system-ui, -apple-system, sans-serif"
+    },
+    "scale": {
+      "heading-1": { "family": "Inter", "weight": 700, "size": 38, "lineHeight": "100%", "letterSpacing": 0, "usage": "Display / onboarding hero headline" },
+      "heading-2-semibold": { "family": "Inter", "weight": 600, "size": 32, "lineHeight": "100%", "letterSpacing": 0, "usage": "Screen title / large page heading" },
+      "heading-2-medium": { "family": "Inter", "weight": 500, "size": 32, "lineHeight": "100%", "letterSpacing": 0, "usage": "Medium-weight large title variant" },
+      "heading-3-semibold": { "family": "Inter", "weight": 600, "size": 24, "lineHeight": "100%", "letterSpacing": 0, "usage": "Section/step heading, card title, nav title" },
+      "heading-3-bold": { "family": "Inter", "weight": 700, "size": 24, "lineHeight": "100%", "letterSpacing": 0, "usage": "Emphasized section heading" },
+      "body-large-semibold": { "family": "Inter", "weight": 600, "size": 18, "lineHeight": "100%", "letterSpacing": 0, "usage": "Primary button label, top-bar title" },
+      "body-base-bold": { "family": "Inter", "weight": 700, "size": 16, "lineHeight": "100%", "letterSpacing": 0, "usage": "Field labels, list-row labels, track title" },
+      "body-base-medium": { "family": "Inter", "weight": 500, "size": 16, "lineHeight": "100%", "letterSpacing": 0, "usage": "Input value/placeholder, chip label, search text" },
+      "body-base-regular": { "family": "Inter", "weight": 400, "size": 16, "lineHeight": "100%", "letterSpacing": 0, "usage": "Body copy, captions, tag text" },
+      "body-medium": { "family": "Inter", "weight": 600, "size": 13, "lineHeight": "100%", "letterSpacing": 0, "usage": "Meta-stat labels" },
+      "body-small": { "family": "Inter", "weight": 500, "size": 12, "lineHeight": "100%", "letterSpacing": 0, "usage": "Caption / small labels" },
+      "micro": { "family": "Inter", "weight": 400, "size": 10, "lineHeight": "100%", "letterSpacing": 0, "usage": "Slider time labels" }
+    }
+  },
+  "spacing": {
+    "1": 2, "1.5": 4, "2": 5, "2.5": 7, "3": 10, "3.5": 11, "4": 12,
+    "5": 14, "gutter": 15, "6": 16, "7": 18, "8": 20, "9": 23, "10": 24,
+    "11": 28, "12": 32, "14": 39, "16": 40, "18": 45, "20": 52, "24": 64,
+    "nav-top-offset": 34
+  },
+  "radius": {
+    "xs": 4.6, "sm": 12, "md": 16, "card": 20, "lg": 24, "xl": 25, "glass": 36, "circle": 99, "full": 9999
+  },
+  "shadow": {
+    "key-dark": "0px 1px 0px 0px rgba(0,0,0,1)",
+    "fab": "0px 8px 24px 0px rgba(0,0,0,0.25)"
+  },
+  "blur": {
+    "sm": 7.5, "md": 10, "lg": 17.5, "xl": 20
+  },
+  "layout": {
+    "screenWidth": 375,
+    "screenHeight": 812,
+    "screenMargin": 16,
+    "statusBarHeight": 34,
+    "homeIndicatorHeight": 15
+  },
+  "iconography": {
+    "style": "Line/stroke icons (Hugeicons-style), monochrome white by default, orange/dark inversions on filled surfaces",
+    "stroke": "1.5-2px",
+    "sizes": [15, 16, 20, 24, 28, 32, 36, 46],
+    "targets": [24, 40, 58, 70, 90]
+  }
+}
