@@ -74,6 +74,8 @@ tailwind.config.ts theme wired to the tokens
 - **[docs/UI_SCREENS.md](docs/UI_SCREENS.md)** — the 37 source UI screens with
   Figma deep links, to reference the real designs while building (great to hand
   to Claude Code with the Figma MCP).
+- **[docs/LIFF.md](docs/LIFF.md)** — the LINE **LIFF** podcast app (Get Started →
+  podcast list) built on this system, ready to embed in a LINE rich menu.
 
 ---
 

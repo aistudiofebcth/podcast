@@ -10,4 +10,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        // the design-system showcase
+        main: path.resolve(__dirname, 'index.html'),
+        // the LINE LIFF podcast app (embed in a rich menu)
+        liff: path.resolve(__dirname, 'liff.html'),
+      },
+    },
+  },
 })

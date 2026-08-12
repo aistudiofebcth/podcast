@@ -25,7 +25,7 @@ export const Chip = React.forwardRef<HTMLButtonElement, ChipProps>(function Chip
   const isFilter = variant === 'filter'
 
   const look = selected
-    ? 'bg-dark-900 text-white border-transparent'
+    ? 'bg-content text-background border-transparent'
     : tone === 'accent'
       ? 'bg-primary text-white border-transparent'
       : tone === 'dark'
