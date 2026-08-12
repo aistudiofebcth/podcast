@@ -6,7 +6,7 @@ export type CircularIconButtonSize = 49 | 58
 
 export interface CircularIconButtonProps
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'aria-label'> {
-  /** Visual style. `outlined` = transparent bg + primary border/icon; `primary-filled` = orange fill + white icon. */
+  /** Visual style. `outlined` = transparent bg + primary border/icon; `primary-filled` = teal fill + white icon. */
   variant?: CircularIconButtonVariant
   /** The glyph to render (an icon from `@/components/icons`). */
   icon: React.ReactNode
@@ -23,8 +23,8 @@ const VARIANT: Record<CircularIconButtonVariant, string> = {
 
 /**
  * Larger circular action button for card and header controls (edit pencil,
- * inline play). Outlined by default with a 1px brand-orange ring; the
- * `primary-filled` treatment is the solid-orange emphasis variant. Always pass
+ * inline play). Outlined by default with a 1px brand-teal ring; the
+ * `primary-filled` treatment is the solid-teal emphasis variant. Always pass
  * `ariaLabel` — there is no visible text.
  */
 export const CircularIconButton = React.forwardRef<HTMLButtonElement, CircularIconButtonProps>(

@@ -16,7 +16,7 @@ export interface ChipProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonEle
 /**
  * Fully-rounded pill used both as a genre filter (Your Studio) and as a static
  * tag overlaid on media cards. Selected filters invert to a solid dark fill;
- * accent tags use the brand orange.
+ * accent tags use the brand teal.
  */
 export const Chip = React.forwardRef<HTMLButtonElement, ChipProps>(function Chip(
   { label, variant = 'filter', tone = 'neutral', selected = false, className, ...rest },

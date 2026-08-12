@@ -9,7 +9,8 @@ It ships the full stack of a design system:
 
 - **Design tokens** — colors, type, spacing, radii, shadows, and blur extracted
   from the Figma variables, exposed as JSON, CSS custom properties, and a wired
-  Tailwind theme. Dark (signature) and light themes.
+  Tailwind theme. Dark (signature) and light themes, themed to the **FEBC
+  Christian Media** palette — deep teal `#014f6e` + sky-blue `#85bdd6`.
 - **Component library** — ~40 accessible, typed React components, from
   primitives (Button, IconButton, TextField) to organisms (TrackRow, FullPlayer,
   BottomNav, PlaylistHeader).

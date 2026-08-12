@@ -17,9 +17,15 @@
 
 :root {
   /* ---- Physical palette ------------------------------------------------ */
-  --zt-primary: #ff3500;
-  --zt-primary-700: rgba(255, 53, 0, 0.7);
-  --zt-primary-150: rgba(255, 53, 0, 0.15);
+  /* Primary brand — FEBC deep teal */
+  --zt-primary: #014f6e;
+  --zt-primary-700: rgba(1, 79, 110, 0.7);
+  --zt-primary-150: rgba(1, 79, 110, 0.15);
+
+  /* Secondary brand — FEBC sky blue */
+  --zt-accent: #85bdd6;
+  --zt-accent-700: rgba(133, 189, 214, 0.7);
+  --zt-accent-150: rgba(133, 189, 214, 0.2);
 
   --zt-black: #151515;
   --zt-white: #ffffff;
@@ -47,9 +53,12 @@
   --color-primary: var(--zt-primary);
   --color-primary-700: var(--zt-primary-700);
   --color-primary-150: var(--zt-primary-150);
+  --color-accent: var(--zt-accent);
+  --color-accent-700: var(--zt-accent-700);
+  --color-accent-150: var(--zt-accent-150);
   --color-button-text: var(--zt-white);
-  --color-logo-mark: var(--zt-primary);
-  --color-logo-wordmark: var(--zt-white);
+  --color-logo-mark: var(--zt-accent);
+  --color-logo-wordmark: var(--color-text);
   --color-warning: var(--zt-warning);
   --color-input-filled: var(--zt-gray-700);
   --color-input-border: var(--zt-white-350);

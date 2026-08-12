@@ -3,16 +3,20 @@
     "name": "ZenTune Design Tokens",
     "description": "Canonical design tokens for the ZenTune music-streaming app, extracted from the ZenTune Figma UI kit (file yDptxi61nJ5FgxfOPNi7mR) via the Figma MCP server.",
     "source": "Figma — ZenTune ⌥ Music Streaming Mobile UI Kit",
-    "brand": "#ff3500",
+    "brand": "#014f6e",
+    "brandName": "FEBC Christian Media",
     "themes": ["dark", "light"]
   },
   "color": {
     "brand": {
-      "primary": { "value": "#ff3500", "role": "Primary brand accent — CTAs, play buttons, selection, logo mark" },
-      "primary-700": { "value": "rgba(255,53,0,0.7)", "role": "Primary hover/pressed / de-emphasized accent" },
-      "primary-150": { "value": "rgba(255,53,0,0.15)", "role": "Primary tint — subtle accent wash / focus ring" },
-      "logo-mark": { "value": "#ff3500", "role": "Logo waveform mark + 'tune' wordmark run" },
-      "logo-wordmark": { "value": "#ffffff", "role": "'zen' wordmark run" }
+      "primary": { "value": "#014f6e", "role": "Primary brand — FEBC deep teal. CTAs, play buttons, selection, active states, headers" },
+      "primary-700": { "value": "rgba(1,79,110,0.7)", "role": "Primary hover/pressed / de-emphasized" },
+      "primary-150": { "value": "rgba(1,79,110,0.15)", "role": "Primary tint — subtle wash / focus ring" },
+      "accent": { "value": "#85bdd6", "role": "Secondary brand — FEBC sky blue. Logo mark, highlights, secondary accents" },
+      "accent-700": { "value": "rgba(133,189,214,0.7)", "role": "Sky blue, pressed / de-emphasized" },
+      "accent-150": { "value": "rgba(133,189,214,0.2)", "role": "Sky blue tint — subtle wash" },
+      "logo-mark": { "value": "#85bdd6", "role": "Logo waveform mark + 'tune' wordmark run (sky blue)" },
+      "logo-wordmark": { "value": "theme-adaptive", "role": "'zen' wordmark run — follows theme text colour" }
     },
     "base": {
       "black": { "value": "#151515", "role": "Near-black — dark canvas base" },
@@ -91,7 +95,7 @@
     "homeIndicatorHeight": 15
   },
   "iconography": {
-    "style": "Line/stroke icons (Hugeicons-style), monochrome white by default, orange/dark inversions on filled surfaces",
+    "style": "Line/stroke icons (Hugeicons-style), monochrome white by default, teal/dark inversions on filled surfaces",
     "stroke": "1.5-2px",
     "sizes": [15, 16, 20, 24, 28, 32, 36, 46],
     "targets": [24, 40, 58, 70, 90]

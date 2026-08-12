@@ -12,7 +12,7 @@ export interface PlayPauseButtonProps
 
 /**
  * Emphasized transport button — the central play/pause control of the ZenTune
- * player. Solid brand-orange circle; swaps between the filled Play and Pause
+ * player. Solid brand-teal circle; swaps between the filled Play and Pause
  * glyphs based on `playing`. The accessible label reflects the current action.
  */
 export const PlayPauseButton = React.forwardRef<HTMLButtonElement, PlayPauseButtonProps>(

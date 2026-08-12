@@ -20,6 +20,11 @@ const config: Config = {
           700: 'var(--zt-primary-700)',
           150: 'var(--zt-primary-150)',
         },
+        accent: {
+          DEFAULT: 'var(--zt-accent)',
+          700: 'var(--zt-accent-700)',
+          150: 'var(--zt-accent-150)',
+        },
         logo: {
           mark: 'var(--color-logo-mark)',
           wordmark: 'var(--color-logo-wordmark)',

@@ -38,11 +38,16 @@ the semantic aliases (`background`, `surface`, `content`, `border`, `icon`) do.
 
 **Brand**
 
+The palette follows **FEBC Christian Media**: a deep teal primary paired with a sky-blue accent.
+
 | Token | Value | Role |
 | --- | --- | --- |
-| `primary` | `#ff3500` | Brand accent — CTAs, play, selection, logo mark |
-| `primary-700` | `rgba(255,53,0,0.7)` | Hover / pressed / de-emphasized accent |
-| `primary-150` | `rgba(255,53,0,0.15)` | Subtle accent wash / focus ring |
+| `primary` | `#014f6e` | Brand — FEBC deep teal. CTAs, play, selection, active states, headers |
+| `primary-700` | `rgba(1,79,110,0.7)` | Hover / pressed / de-emphasized |
+| `primary-150` | `rgba(1,79,110,0.15)` | Subtle wash / focus ring |
+| `accent` | `#85bdd6` | Secondary — FEBC sky blue. Logo mark, highlights, secondary accents |
+| `accent-700` | `rgba(133,189,214,0.7)` | Sky blue, pressed / de-emphasized |
+| `accent-150` | `rgba(133,189,214,0.2)` | Sky blue tint — subtle wash |
 | `warning` | `#e9a81c` | Warning + rating-star gold |
 
 **Neutrals**
@@ -149,7 +154,7 @@ Frosted surfaces are available as `.glass` (20% / 20px), `.glass-soft`
 
 ### Iconography
 
-Line/stroke icons (Hugeicons-style), monochrome white by default, with orange
+Line/stroke icons (Hugeicons-style), monochrome white by default, with teal
 or dark inversions on filled surfaces; stroke ~1.5–2px. Standard sizes:
 **15** (inline stats), **16** (small chevrons), **20–24** (list / input),
 **28** (card / transport), **32** (top-nav), **36** (bottom-nav), **46** (play

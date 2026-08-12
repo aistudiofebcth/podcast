@@ -5,7 +5,7 @@ import Chip from '@/components/forms/Chip'
 /** A single genre tag rendered in the card's bottom row. */
 export interface AlbumCardTag {
   label: string
-  /** `accent` = brand orange fill; `neutral` = translucent white (default). */
+  /** `accent` = brand teal fill; `neutral` = translucent white (default). */
   tone?: 'accent' | 'neutral'
 }
 

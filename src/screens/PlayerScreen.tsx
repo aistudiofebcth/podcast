@@ -20,7 +20,7 @@ export function PlayerScreen() {
   return (
     <Screen theme="dark" className="relative flex flex-col">
       {/* Full-bleed cover artwork + scrim */}
-      <img src={covers.ember} alt="" className="absolute inset-0 size-full object-cover" />
+      <img src={covers.neon} alt="" className="absolute inset-0 size-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-b from-dark-900/40 via-dark-900/20 to-dark-900/95" />
 
       <div className="relative flex flex-1 flex-col">

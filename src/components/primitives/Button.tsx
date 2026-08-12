@@ -5,7 +5,7 @@ export type ButtonVariant = 'primary' | 'light' | 'secondary'
 export type ButtonSize = 'md' | 'lg'
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /** Visual style. `primary` = orange fill; `light` = white fill / orange label (e.g. Log Out); `secondary` = outlined. */
+  /** Visual style. `primary` = teal fill; `light` = white fill / teal label (e.g. Log Out); `secondary` = outlined. */
   variant?: ButtonVariant
   /** `lg` (68px, 18px label) is the default CTA; `md` (56px, 16px label) is compact. */
   size?: ButtonSize
@@ -33,7 +33,7 @@ const SIZE: Record<ButtonSize, string> = {
 /**
  * Primary pill-shaped call-to-action.
  *
- * Full-radius, centered label, optional leading icon. The brand orange
+ * Full-radius, centered label, optional leading icon. The brand teal
  * `primary` variant drives every affirmative CTA in ZenTune; `light` is the
  * inverted treatment used for destructive/secondary actions like Log Out.
  */

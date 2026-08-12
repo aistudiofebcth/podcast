@@ -14,7 +14,7 @@ export interface TrackRowProps {
   artist: string
   /** Whether this track is currently playing (shows pause overlay + active fill). */
   playing?: boolean
-  /** Whether the track is favourited (fills the heart in brand orange). */
+  /** Whether the track is favourited (fills the heart in brand teal). */
   favourited?: boolean
   /** Fired when the thumbnail play/pause overlay is pressed. */
   onPlayPause?: () => void

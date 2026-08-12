@@ -16,7 +16,7 @@ export interface ActivityCardProps extends React.HTMLAttributes<HTMLDivElement> 
 /**
  * Accent CTA row.
  *
- * A full-width brand-orange button with a rounded leading icon tile, a bold
+ * A full-width brand-teal button with a rounded leading icon tile, a bold
  * label, and a trailing chevron — used to promote a featured activity or
  * destination.
  */

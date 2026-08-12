@@ -19,7 +19,7 @@ export interface CheckboxProps {
  * Checkbox with an optional inline label.
  *
  * A `role="checkbox"` button drives accessibility while the box swaps between a
- * filled brand-orange state with a checkmark and an empty outlined state.
+ * filled brand-teal state with a checkmark and an empty outlined state.
  */
 export const Checkbox = React.forwardRef<HTMLButtonElement, CheckboxProps>(function Checkbox(
   { checked, onChange, disabled = false, label, id },

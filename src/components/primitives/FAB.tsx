@@ -6,7 +6,7 @@ export type FABSize = 70 | 86
 
 export interface FABProps
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'aria-label'> {
-  /** Visual style. `primary` = orange fill / white icon; `light` = white fill / ink icon. */
+  /** Visual style. `primary` = teal fill / white icon; `light` = white fill / ink icon. */
   variant?: FABVariant
   /** The glyph to render (an icon from `@/components/icons`). */
   icon: React.ReactNode
