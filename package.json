@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
+    "build:html": "vite build --config scripts/vite.config.single.mjs && node scripts/inline-single-html.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006 --no-open",

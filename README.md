@@ -25,8 +25,22 @@ It ships the full stack of a design system:
 npm install
 npm run dev        # start the showcase at http://localhost:5173
 npm run build      # typecheck + production build
+npm run build:html # one self-contained, offline showcase HTML (see below)
 npm run typecheck  # types only
 ```
+
+### Download the showcase as one HTML file
+
+`npm run build:html` bundles the entire showcase — every token, colour (with
+hex), and component — into a single **offline** file with all JS, CSS, and web
+fonts inlined (no network requests):
+
+```
+dist-single/FEBC-Podcast-Design-System.html   # ~760 KB, open it in any browser
+```
+
+Hand this file to anyone who needs to browse the design system without cloning
+the repo.
 
 ## Using the library
 
