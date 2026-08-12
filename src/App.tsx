@@ -2,6 +2,7 @@ import * as React from 'react'
 import {
   // primitives
   Button,
+  SocialButton,
   IconButton,
   CircularIconButton,
   FAB,
@@ -66,6 +67,7 @@ import {
   Bluetooth,
 } from '@/components'
 import { covers } from '@/lib/placeholder'
+import { SCREEN_GROUPS, figmaUrl, BOARD_URL } from '@/reference/screens'
 import LoginScreen from '@/screens/LoginScreen'
 import HomeScreen from '@/screens/HomeScreen'
 import PlayerScreen from '@/screens/PlayerScreen'
@@ -370,6 +372,13 @@ function Gallery() {
               <Button variant="primary" label="Loading" loading />
             </div>
           </Panel>
+          <Panel title="SocialButton">
+            <div className="flex flex-col gap-3">
+              <SocialButton provider="apple" />
+              <SocialButton provider="google" variant="outline" />
+              <SocialButton provider="facebook" variant="outline" />
+            </div>
+          </Panel>
           <Panel title="IconButton / Circular / FAB">
             <IconButton icon={<Search />} ariaLabel="s" fill="transparent" size={40} />
             <IconButton icon={<Heart />} ariaLabel="h" fill="glass" size={40} />
@@ -577,18 +586,57 @@ function Gallery() {
         </Grid>
       </Section>
 
-      <Section id="screens" title="Screens">
-        <div className="flex gap-8 overflow-x-auto pb-4 no-scrollbar">
-          {[
-            ['Log in', <LoginScreen key="l" />],
-            ['Your Studio', <HomeScreen key="h" />],
-            ['Player', <PlayerScreen key="p" />],
-            ['Settings', <SettingsScreen key="s" />],
-          ].map(([label, node]) => (
-            <figure key={label as string} className="m-0 flex shrink-0 flex-col items-center gap-3">
-              <figcaption className="type-caption text-content-muted">{label as string}</figcaption>
-              <div className="overflow-hidden rounded-[44px] ring-1 ring-white-200 shadow-fab">{node as React.ReactNode}</div>
+      <Section id="screens" title="ตัวอย่าง UI Screen Design">
+        <p className="-mt-3 mb-6 max-w-3xl type-body text-content-muted">
+          Reference designs for building with this system. This environment can’t export Figma
+          images, so each screen links to its exact node — open it (or hand it to Claude Code with
+          the Figma MCP) to reference the real design.{' '}
+          <a href={BOARD_URL} target="_blank" rel="noreferrer" className="text-accent underline">
+            Open the full board in Figma ↗
+          </a>
+        </p>
+
+        <div className="mb-10 flex gap-8 overflow-x-auto pb-4 no-scrollbar">
+          {(
+            [
+              ['Log in', '2003:5316', <LoginScreen key="l" />],
+              ['Your Studio', '2003:6330', <HomeScreen key="h" />],
+              ['Player', '2003:6415', <PlayerScreen key="p" />],
+              ['Settings', '2003:8824', <SettingsScreen key="s" />],
+            ] as [string, string, React.ReactNode][]
+          ).map(([label, id, node]) => (
+            <figure key={label} className="m-0 flex shrink-0 flex-col items-center gap-2">
+              <div className="overflow-hidden rounded-[44px] ring-1 ring-white-200 shadow-fab">{node}</div>
+              <figcaption className="type-caption text-content">{label}</figcaption>
+              <a href={figmaUrl(id)} target="_blank" rel="noreferrer" className="type-micro text-accent underline">
+                View in Figma ↗
+              </a>
             </figure>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {SCREEN_GROUPS.map((g) => (
+            <div key={g.title} className="rounded-lg border border-white-150 bg-white-150 p-5">
+              <h3 className="type-body-bold text-content">{g.title}</h3>
+              <ul className="mt-3 flex flex-col gap-1.5">
+                {g.screens.map((s) => (
+                  <li key={s.nodeId}>
+                    <a
+                      href={figmaUrl(s.nodeId)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 type-caption text-content-muted hover:text-content"
+                    >
+                      <span className={s.reproduced ? 'text-accent' : 'text-content-muted'}>
+                        {s.reproduced ? '✎' : '↗'}
+                      </span>
+                      {s.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </Section>

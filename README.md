@@ -69,8 +69,11 @@ tailwind.config.ts theme wired to the tokens
 
 ## Documentation
 
-See **[docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md)** for the full token
-reference, theming model, and component catalog.
+- **[docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md)** — full token reference,
+  theming model, and component catalog.
+- **[docs/UI_SCREENS.md](docs/UI_SCREENS.md)** — the 37 source UI screens with
+  Figma deep links, to reference the real designs while building (great to hand
+  to Claude Code with the Figma MCP).
 
 ---
 

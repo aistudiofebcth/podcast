@@ -8,6 +8,7 @@ export * from './icons'
 
 // Primitives
 export * from './primitives/Button'
+export * from './primitives/SocialButton'
 export * from './primitives/IconButton'
 export * from './primitives/CircularIconButton'
 export * from './primitives/FAB'
