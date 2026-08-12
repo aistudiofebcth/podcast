@@ -66,7 +66,8 @@ import {
   Library,
   Mail,
   Bluetooth,
-  MoreHorizontal,
+  MoreVertical,
+  HeartFilled,
   UsersGroup,
 } from '@/components'
 import { covers } from '@/lib/placeholder'
@@ -477,26 +478,25 @@ function Gallery() {
             <ArtistCardDemo />
           </Panel>
           <Panel title="ArtistRow" wide>
-            <div className="flex w-full max-w-md flex-col gap-3">
-              <ArtistRow
-                cover={covers.bloom}
-                name="Jaxon Hayes"
-                subtitle="Artist"
-                verified
-                trailing={
-                  <span className="rounded-full border border-stroke-strong px-3 py-1 type-caption text-content">
-                    Following
-                  </span>
-                }
-              />
+            <div className="flex w-full max-w-md flex-col gap-4">
               <ArtistRow
                 cover={covers.midnight}
                 name="Wishing Well"
                 subtitle="Juice WRLD"
                 trailing={
-                  <span className="flex items-center gap-2">
-                    <IconButton icon={<Heart className="text-primary" />} ariaLabel="Favourite" size={24} />
-                    <IconButton icon={<MoreHorizontal />} ariaLabel="More" size={24} />
+                  <span className="flex items-center gap-4 pr-1">
+                    <HeartFilled size={28} className="text-[#ff3b30]" />
+                    <MoreVertical size={22} className="text-white" />
+                  </span>
+                }
+              />
+              <ArtistRow
+                cover={covers.bloom}
+                name="Jaxon Hayes"
+                verified
+                trailing={
+                  <span className="rounded-full border border-stroke-strong px-4 py-2 text-[13px] font-medium text-content">
+                    Following
                   </span>
                 }
               />
@@ -534,10 +534,22 @@ function Gallery() {
             </div>
           </Panel>
           <Panel title="ListRow" wide>
-            <div className="flex w-full flex-col gap-3">
-              <ListRow leading={<Bell size={22} />} label="Notifications" trailing={<ToggleDemo />} />
-              <ListRow leading={<Lock size={22} />} label="Password" onPress={() => {}} />
-              <ListRow size="tall" leadingType="avatar" leading={<img src={covers.bloom} alt="" className="size-full object-cover" />} label="Amelia Park" caption="View profile" />
+            <div className="flex w-full max-w-md flex-col gap-4">
+              <ListRow
+                size="tall"
+                leadingType="square"
+                leading={
+                  <span className="relative block size-full">
+                    <img src={covers.goldenHour} alt="" className="size-full rounded-[16px] object-cover" />
+                    <span className="absolute -bottom-1.5 -left-1.5 text-lg leading-none">👑</span>
+                  </span>
+                }
+                label="Alex Test"
+                caption="View Profile"
+                onPress={() => {}}
+              />
+              <ListRow leading={<Bell size={24} />} label="Notifications" onPress={() => {}} />
+              <ListRow leading={<Lock size={24} />} label="Password" trailing={<ToggleDemo />} />
             </div>
           </Panel>
           <Panel title="SectionHeader · PaginationDots">

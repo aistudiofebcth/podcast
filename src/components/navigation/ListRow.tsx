@@ -2,7 +2,7 @@ import * as React from 'react'
 import { cn } from '@/lib/cn'
 import { ChevronRight } from '@/components/icons'
 
-export type ListRowLeadingType = 'icon' | 'avatar' | 'thumbnail'
+export type ListRowLeadingType = 'icon' | 'avatar' | 'square' | 'thumbnail'
 export type ListRowSize = 'row' | 'tall'
 
 /** Props for a reusable settings / menu row. */
@@ -27,6 +27,7 @@ export interface ListRowProps {
 const LEADING: Record<ListRowLeadingType, string> = {
   icon: 'grid size-6 place-items-center text-icon',
   avatar: 'size-16 rounded-full overflow-hidden',
+  square: 'size-14 rounded-[16px] overflow-visible',
   thumbnail: 'size-20 rounded-[16px] overflow-hidden',
 }
 
@@ -53,22 +54,22 @@ export function ListRow({
     <Root
       {...(onPress ? { type: 'button' as const, onClick: onPress } : {})}
       className={cn(
-        'w-full flex items-center gap-3 rounded-[16px] bg-white-200 px-4 text-left',
+        'w-full flex items-center gap-3.5 rounded-[20px] bg-white-200 px-4 text-left',
         'transition-colors duration-150 ease-zen',
         onPress &&
           'active:bg-white-250 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-        size === 'tall' ? 'h-[101px]' : 'h-14',
+        size === 'tall' ? 'h-[90px]' : 'h-16',
         className,
       )}
     >
       {leading != null && <span className={cn('shrink-0', LEADING[leadingType])}>{leading}</span>}
 
       <span className="flex-1 min-w-0">
-        <span className="block type-body-bold text-content">{label}</span>
-        {caption && <span className="block type-caption text-content-muted mt-1">{caption}</span>}
+        <span className="block text-[17px] font-bold text-content">{label}</span>
+        {caption && <span className="mt-0.5 block text-[14px] text-content-muted">{caption}</span>}
       </span>
 
-      {trailing ?? <ChevronRight size={20} className="text-content-muted ml-auto" />}
+      {trailing ?? <ChevronRight size={24} className="text-content-muted ml-auto" />}
     </Root>
   )
 }

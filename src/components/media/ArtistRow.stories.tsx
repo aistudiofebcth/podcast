@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ArtistRow } from './ArtistRow'
-import { IconButton, Heart, MoreHorizontal } from '@/components'
+import { HeartFilled, MoreVertical } from '@/components'
 import { covers } from '@/lib/placeholder'
 
 const meta = {
@@ -36,9 +36,9 @@ export const WithActions: Story = {
     subtitle: 'Juice WRLD',
     verified: false,
     trailing: (
-      <span className="flex items-center gap-2">
-        <IconButton icon={<Heart className="text-primary" />} ariaLabel="Favourite" size={24} />
-        <IconButton icon={<MoreHorizontal />} ariaLabel="More" size={24} />
+      <span className="flex items-center gap-4">
+        <HeartFilled size={28} className="text-[#ff3b30]" />
+        <MoreVertical size={22} className="text-white" />
       </span>
     ),
   },

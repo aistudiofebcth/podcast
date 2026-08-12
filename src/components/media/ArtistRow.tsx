@@ -47,18 +47,22 @@ export const ArtistRow = React.forwardRef<HTMLDivElement, ArtistRowProps>(functi
           : undefined
       }
       className={cn(
-        'flex items-center gap-3 rounded-[20px] glass p-2.5 pr-4',
+        'flex items-center gap-3.5 rounded-[20px] glass p-3 pr-5',
         interactive && 'cursor-pointer transition-colors hover:bg-white-250',
         className,
       )}
     >
-      <img src={cover} alt="" className="size-12 shrink-0 rounded-[14px] object-cover" />
+      <img src={cover} alt="" className="size-16 shrink-0 rounded-[16px] object-cover" />
       <span className="min-w-0 flex-1">
         <span className="flex items-center gap-1.5">
-          <span className="truncate type-body-bold text-white">{name}</span>
-          {verified && <Verified size={16} className="shrink-0 text-accent" />}
+          <span className="truncate text-[18px] font-bold text-white">{name}</span>
+          {verified && <Verified size={18} className="shrink-0 text-accent" />}
         </span>
-        {subtitle && <span className="block truncate type-caption text-content-muted">{subtitle}</span>}
+        {subtitle && (
+          <span className="mt-0.5 block truncate text-[14px] font-medium text-content-muted">
+            {subtitle}
+          </span>
+        )}
       </span>
       {trailing && <span className="ml-auto shrink-0">{trailing}</span>}
     </div>
