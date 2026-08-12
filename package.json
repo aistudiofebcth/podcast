@@ -6,9 +6,9 @@
   "description": "ZenTune — a music-streaming design system (React + TypeScript + Tailwind) generated from the ZenTune Figma UI kit.",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc -b --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.18",
