@@ -84,7 +84,7 @@ export function HomeScreen() {
       </div>
 
       <BottomNavBar
-        className="absolute inset-x-0 bottom-6"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2"
         activeKey={tab}
         onSelect={setTab}
         items={[

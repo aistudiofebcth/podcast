@@ -280,20 +280,6 @@ function SliderDemo() {
   const [v, setV] = React.useState(70)
   return <ProgressSlider value={v} max={214} onSeek={setV} elapsedLabel="1:22" totalLabel="3:34" />
 }
-function BottomNavDemo() {
-  const [k, setK] = React.useState('home')
-  return (
-    <BottomNavBar
-      activeKey={k}
-      onSelect={setK}
-      items={[
-        { key: 'home', icon: <Home />, ariaLabel: 'Home' },
-        { key: 'library', icon: <Library />, ariaLabel: 'Library' },
-        { key: 'search', icon: <Search />, ariaLabel: 'Search' },
-      ]}
-    />
-  )
-}
 function TrackRowDemo() {
   const [p, setP] = React.useState(true)
   const [f, setF] = React.useState(true)
@@ -469,9 +455,22 @@ function Gallery() {
             <StatTile icon={<Heart />} label="12.4k" />
             <StatTile icon={<MusicNote />} label="48 tracks" />
           </Panel>
-          <Panel title="AlbumCard">
-            <div className="w-[240px]">
-              <AlbumCard cover={covers.goldenHour} title="Golden Hour" episodeCount="12 episodes" tags={[{ label: 'Pop', tone: 'accent' }, { label: 'Chill' }]} className="w-[240px] h-[224px]" />
+          <Panel title="AlbumCard" wide>
+            <div className="flex flex-wrap gap-5">
+              <AlbumCard
+                cover={covers.ember}
+                title="Taylor Swift"
+                episodeCount="75 ep."
+                align="right"
+                tags={[{ label: 'Pop', tone: 'accent' }, { label: 'Top Hits' }]}
+              />
+              <AlbumCard
+                cover={covers.midnight}
+                title="Taylor Swift"
+                episodeCount="75 ep."
+                align="left"
+                tags={[{ label: 'Pop', tone: 'accent' }, { label: 'Top Hits' }]}
+              />
             </div>
           </Panel>
           <Panel title="ArtistCard">
@@ -518,8 +517,21 @@ function Gallery() {
               </div>
             </div>
           </Panel>
-          <Panel title="BottomNav">
-            <BottomNavDemo />
+          <Panel title="BottomNav — states" wide>
+            <div className="flex flex-wrap items-center gap-6">
+              {(['home', 'playlist', 'search', 'none'] as const).map((k) => (
+                <BottomNavBar
+                  key={k}
+                  activeKey={k}
+                  onSelect={() => {}}
+                  items={[
+                    { key: 'home', icon: <Home />, ariaLabel: 'Home' },
+                    { key: 'playlist', icon: <Library />, ariaLabel: 'Playlist' },
+                    { key: 'search', icon: <Search />, ariaLabel: 'Search' },
+                  ]}
+                />
+              ))}
+            </div>
           </Panel>
           <Panel title="ListRow" wide>
             <div className="flex w-full flex-col gap-3">
