@@ -36,6 +36,7 @@ export * from './media/AlbumThumbnail'
 export * from './media/StatTile'
 export * from './media/AlbumCard'
 export * from './media/ArtistCard'
+export * from './media/ArtistRow'
 
 // Navigation
 export * from './navigation/TopAppBar'

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { cn } from '@/lib/cn'
 
 export type SocialProvider = 'apple' | 'google' | 'facebook'
-export type SocialButtonVariant = 'filled' | 'outline'
+export type SocialButtonVariant = 'filled' | 'outline' | 'text'
 
 export interface SocialButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** Which identity provider this button authenticates with. */
@@ -33,6 +33,12 @@ const LABEL: Record<SocialProvider, string> = {
   facebook: 'Continue with Facebook',
 }
 
+const VARIANT: Record<SocialButtonVariant, string> = {
+  filled: 'bg-primary text-white active:bg-primary-700',
+  outline: 'bg-transparent text-content border border-stroke-strong active:bg-white-150',
+  text: 'bg-transparent text-content active:bg-white-150',
+}
+
 /**
  * Social sign-in button.
  *
@@ -51,9 +57,7 @@ export const SocialButton = React.forwardRef<HTMLButtonElement, SocialButtonProp
           'type-body-bold transition-colors duration-150 ease-zen',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background',
           'disabled:pointer-events-none disabled:opacity-50',
-          variant === 'filled'
-            ? 'bg-primary text-white active:bg-primary-700'
-            : 'bg-transparent text-content border border-stroke-strong active:bg-white-150',
+          VARIANT[variant],
           fullWidth ? 'w-full' : 'w-fit min-w-[220px]',
           className,
         )}

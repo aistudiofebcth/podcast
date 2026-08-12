@@ -279,6 +279,21 @@ export const Shield: Icon = (p) => (
   </IconBase>
 )
 
+export const UsersGroup: Icon = (p) => (
+  <IconBase {...p}>
+    <circle cx="9" cy="8" r="3.1" />
+    <path d="M3.6 20c0-3 2.4-5 5.4-5s5.4 2 5.4 5" />
+    <path d="M16.2 5.3a3.1 3.1 0 010 5.4" />
+    <path d="M17.8 20c0-2.2-.8-4-2-5.1 2.9.1 4.8 2.1 4.8 5.1" />
+  </IconBase>
+)
+export const Verified: Icon = (p) => (
+  <IconBase filled {...p}>
+    <circle cx="12" cy="12" r="10" />
+    <path d="M7.8 12.4l2.7 2.6 5-5.4" stroke="#fff" strokeWidth="2.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+  </IconBase>
+)
+
 /** Name → component map, handy for data-driven rendering. */
 export const icons = {
   chevronLeft: ChevronLeft,
@@ -319,6 +334,8 @@ export const icons = {
   logout: Logout,
   info: Info,
   shield: Shield,
+  usersGroup: UsersGroup,
+  verified: Verified,
 } as const
 
 export type IconName = keyof typeof icons

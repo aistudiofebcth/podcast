@@ -28,6 +28,7 @@ import {
   StatTile,
   AlbumCard,
   ArtistCard,
+  ArtistRow,
   // navigation
   TopAppBar,
   BottomNavBar,
@@ -65,6 +66,8 @@ import {
   Library,
   Mail,
   Bluetooth,
+  MoreHorizontal,
+  UsersGroup,
 } from '@/components'
 import { covers } from '@/lib/placeholder'
 import { SCREEN_GROUPS, figmaUrl, BOARD_URL } from '@/reference/screens'
@@ -376,7 +379,7 @@ function Gallery() {
             <div className="flex flex-col gap-3">
               <SocialButton provider="apple" />
               <SocialButton provider="google" variant="outline" />
-              <SocialButton provider="facebook" variant="outline" />
+              <SocialButton provider="apple" variant="text" />
             </div>
           </Panel>
           <Panel title="IconButton / Circular / FAB">
@@ -474,6 +477,32 @@ function Gallery() {
           <Panel title="ArtistCard">
             <ArtistCardDemo />
           </Panel>
+          <Panel title="ArtistRow" wide>
+            <div className="flex w-full max-w-md flex-col gap-3">
+              <ArtistRow
+                cover={covers.bloom}
+                name="Jaxon Hayes"
+                subtitle="Artist"
+                verified
+                trailing={
+                  <span className="rounded-full border border-stroke-strong px-3 py-1 type-caption text-content">
+                    Following
+                  </span>
+                }
+              />
+              <ArtistRow
+                cover={covers.midnight}
+                name="Wishing Well"
+                subtitle="Juice WRLD"
+                trailing={
+                  <span className="flex items-center gap-2">
+                    <IconButton icon={<Heart className="text-primary" />} ariaLabel="Favourite" size={24} />
+                    <IconButton icon={<MoreHorizontal />} ariaLabel="More" size={24} />
+                  </span>
+                }
+              />
+            </div>
+          </Panel>
         </Grid>
       </Section>
 
@@ -565,7 +594,7 @@ function Gallery() {
           </Panel>
           <Panel title="ActivityCard" wide>
             <div className="w-full max-w-md">
-              <ActivityCard label="Liked Songs" icon={<Heart />} onPress={() => {}} />
+              <ActivityCard label="Followed Artists" icon={<UsersGroup />} onPress={() => {}} />
             </div>
           </Panel>
           <Panel title="CollectionPanel" wide>
