@@ -10,7 +10,9 @@
  *
  * The app ships two themes. Dark (#151515) is the default/signature theme
  * used by auth, onboarding, settings, and the player. Light (#ffffff) is used
- * by home, library, and artist-select. Switch with `data-theme="light"`.
+ * by home, library, and artist-select. Any element (not just :root) can open
+ * a theme scope with `data-theme="dark|light"`, so a light home screen can
+ * still host a dark bottom-nav, etc.
  */
 
 :root {
@@ -52,18 +54,6 @@
   --color-input-filled: var(--zt-gray-700);
   --color-input-border: var(--zt-white-350);
 
-  /* ---- Theme: DARK (default) ------------------------------------------ */
-  --color-background: var(--zt-black);
-  --color-surface: var(--zt-white-200);
-  --color-surface-strong: var(--zt-white-250);
-  --color-glass: var(--zt-white-200);
-  --color-scrim: var(--zt-dark-500);
-  --color-text: var(--zt-white);
-  --color-text-muted: var(--zt-white-500);
-  --color-icon: var(--zt-white);
-  --color-border: var(--zt-white-250);
-  --color-border-strong: var(--zt-white-350);
-
   --font-sans: 'Inter', 'SF Pro Text', 'SF Pro Display', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   /* ---- Radii ----------------------------------------------------------- */
@@ -82,8 +72,24 @@
   --shadow-fab: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
 }
 
-/* ---- Theme: LIGHT --------------------------------------------------- */
+/* ---- Theme: DARK (default; also any nested data-theme="dark" scope) --- */
+:root,
+[data-theme='dark'] {
+  --color-background: var(--zt-black);
+  --color-surface: var(--zt-white-200);
+  --color-surface-strong: var(--zt-white-250);
+  --color-glass: var(--zt-white-200);
+  --color-scrim: var(--zt-dark-500);
+  --color-text: var(--zt-white);
+  --color-text-muted: var(--zt-white-500);
+  --color-icon: var(--zt-white);
+  --color-border: var(--zt-white-250);
+  --color-border-strong: var(--zt-white-350);
+}
+
+/* ---- Theme: LIGHT (root or any nested data-theme="light" scope) ------- */
 :root[data-theme='light'],
+[data-theme='light'],
 .theme-light {
   --color-background: var(--zt-white);
   --color-surface: var(--zt-dark-250);
